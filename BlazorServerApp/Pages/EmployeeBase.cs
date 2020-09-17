@@ -11,12 +11,25 @@ namespace BlazorServerApp.Pages
     {
         public IEnumerable<Employee> Employees { get; set; }
 
+        public string NameReturned { get; set; }
+
 
         protected override Task OnInitializedAsync()
         {
-            LoadEmployee();
+          //  LoadEmployee();
             return base.OnInitializedAsync();   
         }
+
+        public string GetEmployee(int id)
+        {
+            string emp = (from a in Employees
+                          where a.ID == id
+                          select a.FirstName).FirstOrDefault();
+            NameReturned = emp;
+            return emp;
+        }
+
+
 
         private void LoadEmployee()
         {
@@ -25,10 +38,10 @@ namespace BlazorServerApp.Pages
                 ID = 1,
                 FirstName = "A",
                 LastName = "Test",
-                Email = "aaaa@yahoo.com",
-                Departments = new Departments { DepartmentID = 1, DepartmentName = "Software" },
-                Gender = Gender.Male , 
-                PhotoPath = "Img/download.png"
+                Gender = "aaaa@yahoo.com",
+                //Departments = new Departments { DepartmentID = 1, DepartmentName = "Software" },
+                //Gender = Gender.Male , 
+                //PhotoPath = "Img/download.png"
             };
 
             Employee employee2 = new Employee()
@@ -36,10 +49,10 @@ namespace BlazorServerApp.Pages
                 ID = 1,
                 FirstName = "B",
                 LastName = "Test",
-                Email = "bbbbb@yahoo.com",
-                Departments = new Departments { DepartmentID = 2, DepartmentName = "HardWare" },
-                Gender = Gender.Female , 
-                PhotoPath = "Img/images.png"
+                Gender = "bbbbb@yahoo.com",
+                //Departments = new Departments { DepartmentID = 2, DepartmentName = "HardWare" },
+                //Gender = Gender.Female , 
+                //PhotoPath = "Img/images.png"
             };
 
             Employee employee3 = new Employee()
@@ -47,10 +60,10 @@ namespace BlazorServerApp.Pages
                 ID = 1,
                 FirstName = "C",
                 LastName = "Test",
-                Email = "cccc@yahoo.com",
-                Departments = new Departments { DepartmentID = 1, DepartmentName = "Network" },
-                Gender = Gender.Male ,
-                PhotoPath = "Img/male.png"
+                Gender = "cccc@yahoo.com",
+                //Departments = new Departments { DepartmentID = 1, DepartmentName = "Network" },
+                //Gender = Gender.Male ,
+                //PhotoPath = "Img/male.png"
             };
 
 

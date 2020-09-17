@@ -12,12 +12,17 @@ namespace EmployeeManagement.Models
 
         public string LastName { get; set; }
 
-        public string Email { get; set; }
+        public string Gender { get; set; }
 
-        public Departments Departments { get; set; }
+        public string Dept_Name { get; set; }
 
-        public Gender Gender { get; set; }
+        public int Dept_id { get; set; }
 
-        public string PhotoPath { get; set; }
+
+        //public Departments Departments { get; set; }
+
+        //public Gender Gender { get; set; }
+
+       // public string PhotoPath { get; set; }
     }
 }

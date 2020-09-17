@@ -11,15 +11,18 @@
                 <h3>@item.FirstName   @item.LastName</h3>
 
             </div>
-            <img  class="card-img" src="@item.PhotoPath" alt="Alternate Text" />
+            @*<img  class="card-img imageThumbail" src="@item.PhotoPath" alt="Alternate Text" />*@
             <div class="card-footer text-center">
-                <a href="#" class="btn btn-primary m-1">View</a>
+                <a href="#" class="btn btn-primary m-1" onclick="@GetEmployee(1)">View</a>
                 <a href="#" class="btn btn-primary m-1">Edit</a>
                 <a href="#" class="btn btn-danger m-1">Delete</a>
             </div>
 
         </div>
     }
+
+
+    <div>Returned Value : @NameReturned</div>
 </div>
 
 

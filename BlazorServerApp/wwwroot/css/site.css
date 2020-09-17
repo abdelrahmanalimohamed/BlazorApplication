@@ -181,3 +181,9 @@ app {
         display: block;
     }
 }
+
+
+.imageThumbail{
+    height : 200px ; 
+    width : auto;
+}
