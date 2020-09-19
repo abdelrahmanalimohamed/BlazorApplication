@@ -1,3 +1,3 @@
 # BlazorApplication
-EmployeesManagement System In-Memroy Database Just  for Learning Purpose
+EmployeesManagement System SqlServer Database Just  for Learning Purpose
 
