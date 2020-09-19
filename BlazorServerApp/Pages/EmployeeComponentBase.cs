@@ -8,7 +8,7 @@ using BlazorServerApp.Service;
 
 namespace BlazorServerApp.Pages
 {
-    public class EmployeeBase :  ComponentBase   
+    public class EmployeeComponentBase :  ComponentBase   
     {
         [Inject]
         public IEmployee IEmployee { get; set; }
